@@ -1,0 +1,45 @@
+body {
+    background-color: #adc4db;
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 80vh;    
+    margin: 0;                /* Removes default margins */
+    flex-direction: column;
+    color: white;
+}
+
+p {
+    height: 10%;
+    color: white;
+    font-size: 24px;
+    margin: 5px;
+}
+
+h1 {
+    font-family: 'HelveticaNeue', sans-serif;
+    font-size: 72px;
+}
+
+button {
+    background-color: #e1d889;
+    cursor: pointer;
+    padding: 15px 30px;  /* Adjust padding instead of setting height */
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    font-size: 24px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 500px; /* Set width explicitly */
+    margin: 10px auto; /* Add vertical spacing and center horizontally */
+    display: block; /* Makes sure margin auto works */
+}
+
+h2 {
+    font-family: 'HelveticaNeue', sans-serif;
+    font-size: 36px;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 10px;
+    margin-top: 20px;
+}

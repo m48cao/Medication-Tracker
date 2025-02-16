@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=HelveticaNeue&display=swap" rel="stylesheet">
+    <title>ElleHacks</title>
+    <link rel="stylesheet" href="css/layout.css">
+
+
+    </head>
+    <H1><B>Medication Tracker</B></H1>
+    <body>
+        <center>
+            <!-- Button to Open Form -->
+            <button class="open-button" onclick="openForm()">Medical Tracker</button>
+        </center>
+        <!-- The Popup Form (Hidden by Default) -->
+        <div id="myModal" class="modal">
+            <div class="form-box">
+                <button class="close-button" onclick="closeForm()">X</button>
+                <h2>Medication Tracker</h2>
+                <form action="dashboard.html" method="GET">
+                    <label for "Medication">Medication: </label>
+                    <input type="text" name="Medication" placeholder="Please enter the name of your medication" required><br> 
+                    
+                    <label for "Time">Time: </label>
+                    <input type="time" name ="time" id ="time"><br>
+
+                    <label for "Remaining">Remaining Amount: </label>
+                    <input type="text" name="Remaining" placeholder="Please enter the remaining amount of your medication" required><br>
+
+                    <label for "Expiry">Expiry Date: </label>
+                    <input type="date" name="Expiry" placeholder="Expiry" required><br>
+
+                    <button type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    
+        <script>
+            // Check if URL parameter 'openForm' is set to 'true'
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('openForm') === 'true') {
+                document.getElementById("myModal").style.display = "flex"; // Show the form
+                document.getElementById("overlay").style.display = "block"; // Show the overlay
+            }
+    
+            // Open the form manually
+            function openForm() {
+                document.getElementById("myModal").style.display = "flex";
+                document.getElementById("overlay").style.display = "block"; // Show the overlay
+            }
+    
+            // Close the form
+            function closeForm() {
+                document.getElementById("myModal").style.display = "none";
+                document.getElementById("overlay").style.display = "none"; // Hide the overlay
+            }
+        </script>
+    
+    <button id="dashboard-btn" onclick="window.location.href='dashboard.html';">Dashboard</button>
+
+
+</body>
+</html>

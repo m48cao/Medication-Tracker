@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="css/dashboard.css">
+        <style>
+            body { font-family: Arial, sans-serif; text-align: center; }
+            table { width: 750px; margin: 20px auto; border-collapse: collapse; }
+            th, td { border: 1px solid black; padding: 10px; text-align: center; }
+            th { background-color: #e1d889; color: black; }
+        </style>
+    </head>
+
+    <body>
+        <h1><b>Dashboard</b></h1>
+        
+        <p> Welcome to your dashboard! </p> 
+        <p> Here you can view your medication details. </p>
+
+        <button onclick="window.location.href='websiteLayout.html?openForm=true'">Open Form</button>
+          
+        <h2>Medications</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Medication Name</th>
+                    <th>Time of Day</th>
+                    <th>Remaining Dosage</th>
+                    <th>Expiry Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if medications %}
+                    {% for med in medications %}
+                        {% set med_details = med.split(',') %}
+                        <tr>
+                            <td>{{ med_details[0] }}</td>  <!-- Medication Name -->
+                            <td>{{ med_details[3] }}</td>  <!-- Time of Day -->
+                            <td>{{ med_details[4] }}</td>  <!-- Remaining Dosage -->
+                            <td>{{ med_details[5] }}</td>  <!-- Expiry Date -->
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="4">No medications added yet.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+
+    </body>
+</html>

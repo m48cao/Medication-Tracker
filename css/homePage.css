@@ -1,0 +1,134 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    background-color: #adc4db;
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 80vh;    
+    margin: 0;                /* Removes default margins */
+    flex-direction: column;
+    
+}
+
+h1 {
+    animation: fadeIn 2s ease-in-out;
+    font-family: 'HelveticaNeue', sans-serif;
+    font-size: 72px;
+    color: hsl(0, 0%, 100%);
+}
+
+
+/* Style for the button */
+.open-button {
+    background-color: #e1d889;
+    cursor: pointer;
+    padding: 30px 200px;
+    border: none;
+    border-radius: 20px;
+    font-size: 36px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Modal (hidden by default) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Form box inside the modal */
+.form-box {
+    position: relative;
+    background: #e3f1ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 800px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Create a row for h2 and close button */
+.form-header {
+    display: flex;
+    justify-content: space-between; /* Push items apart */
+    align-items: center; /* Align vertically */
+    width: 100%;
+}
+
+/* Close button styling */
+.form-box .close-button {
+    background: red !important;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    align-self: flex-end !important;
+}
+
+/* Styling for text inside the form-box */
+.form-box h2 {
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+}
+
+.form-box label {
+    font-size: 18px;
+    text-align: left;
+    display: block;  /* Makes label take full width */
+    margin-bottom: 2px; /* Adds space between label and input */
+}
+
+.form-box input {
+    width: 90%; /* Makes input take full width */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.form-box button {
+    background: #e1d889 !important; 
+    color: black !important;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    align-self: center;
+}
+
+#dashboard-btn {
+    background-color: #e1d889;
+    cursor: pointer;
+    padding: 30px 200px;
+    border: none;
+    width: 680px;
+    border-radius: 20px;
+    font-size: 36px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px;
+}
